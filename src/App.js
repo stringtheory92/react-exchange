@@ -1,3 +1,5 @@
+// 10/16 Next work on updating user wallet on exchange form submit
+
 import React, { useState, useEffect } from "react";
 //import "./components/context-styles.css";
 import "./components/navStyles.css";
@@ -53,7 +55,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => setAllUsers(data));
   }, []);
-  //console.log("allUsers: ", allUsers);
+  console.log("allUsers: ", allUsers);
 
   //=========== PRICE UPDATE CALLBACKS =========
   const updateBtcPrice = () => {
@@ -97,6 +99,8 @@ function App() {
     setUser(user[0]);
   };
 
+  const onUpdateUserWallet = (user) => {};
+
   const onCreateUser = (user) => {
     // Update Frontend
     setAllUsers([...allUsers, user]);
@@ -137,6 +141,7 @@ function App() {
                 updateBtcPrice={updateBtcPrice}
                 updateEthPrice={updateEthPrice}
                 updateEgldPrice={updateEgldPrice}
+                onUpdateUserWallet={onUpdateUserWallet}
               >
                 {/* <UserDropdownOption
                   btcPrice={btcPrice}
