@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# Crypto Exchange App built in React
+
+### 10/16/22
+
+    - project started. Started learning react a few weeks ago. This is my first real project!
+    - using json-server for simulating server. hard-coded to port 3000, so use different port for react server!
+    - New User creation persists to backend, with username and password checks
+    - Simple Api integration is sorted out for now. GET fetches for starter coins integrated. Next is PATCH for updating user wallets
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +76,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
