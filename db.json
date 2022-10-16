@@ -1,0 +1,78 @@
+{
+  "myTodos": [
+    {
+      "id": 1,
+      "description": "Create a new todo",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "description": "Update an existing todo",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "description": "Delete an existing todo",
+      "completed": false
+    },
+    {
+      "description": "Wash Hair",
+      "completed": false,
+      "id": 4
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "Jack",
+      "password": "123",
+      "btc": 1.24,
+      "eth": 36.62
+    },
+    {
+      "id": 2,
+      "name": "Jane",
+      "password": "123",
+      "btc": 3.01,
+      "eth": 21.88
+    },
+    {
+      "name": "Hal",
+      "password": "123",
+      "btc": 5,
+      "eth": 5,
+      "id": 3
+    },
+    {
+      "name": "Sarah",
+      "password": "123",
+      "btc": 10,
+      "eth": 88,
+      "id": 4
+    },
+    {
+      "name": "Adam",
+      "password": "123",
+      "btc": 7,
+      "eth": 7,
+      "id": 5
+    }
+  ]
+}
