@@ -60,12 +60,13 @@ function Exchange({
   //================== STYLES =========================================
 
   const mainPage = {
-    backgroundColor: "#333",
+    backgroundColor: "#222",
     color: "white",
     textAlign: "center",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    height: "100vh",
   };
 
   const formStyles = {
@@ -85,6 +86,8 @@ function Exchange({
 
   const inputDiv = {
     backgroundColor: "#333",
+    borderRadius: "5px",
+    padding: "0.4rem ",
   };
 
   const numberInput = {
@@ -97,10 +100,18 @@ function Exchange({
   };
 
   const dropDownInput = {
-    backgroundColor: "#333",
+    backgroundColor: "#222",
     borderRadius: "6px",
     padding: "0.5rem 0.5rem",
     color: "#b0afae",
+    border: "1px solid #555",
+  };
+
+  const infoDiv = {
+    marginTop: "1rem",
+    backgroundColor: "#333",
+    borderRadius: "5px",
+    padding: "0.4rem ",
   };
 
   const confirmBtn = {
@@ -169,14 +180,16 @@ function Exchange({
             <option value="egld">Egold: ${egldPrice.toFixed(2)}</option>
           </select>
         </div>
+        <div style={infoDiv}>
+          <p>Exchange Rate</p>
+          <p>Slippage</p>
+          <p>Minimum received</p>
+        </div>
 
         <button type="submit" style={confirmBtn}>
           Confirm Trade
         </button>
       </form>
-      <p>Exchange Rate</p>
-      <p>Slippage</p>
-      <p>Minimum received</p>
     </div>
   );
 }
