@@ -57,23 +57,85 @@ function Exchange({
     );
   });
 
+  //================== STYLES =========================================
+
+  const mainPage = {
+    backgroundColor: "#333",
+    color: "white",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  };
+
+  const formStyles = {
+    display: "flex",
+    flexDirection: "column",
+    backgroundColor: "#444",
+    width: "30rem",
+    height: "30rem",
+    padding: "3rem",
+    color: "#b0afae",
+    boxShadow: "0 0 4px #999",
+  };
+
+  const swapText = {
+    textAlign: "left",
+  };
+
+  const inputDiv = {
+    backgroundColor: "#333",
+  };
+
+  const numberInput = {
+    padding: "0.5rem 0.5rem",
+    borderRadius: "6px",
+    border: "none",
+    outline: "none",
+    backgroundColor: "#333",
+    color: "#b0afae",
+  };
+
+  const dropDownInput = {
+    backgroundColor: "#333",
+    borderRadius: "6px",
+    padding: "0.5rem 0.5rem",
+    color: "#b0afae",
+  };
+
+  const confirmBtn = {
+    width: "8rem",
+    backgroundColor: "dodgerBlue",
+    padding: "0.5rem 0.9rem",
+    borderRadius: "10px",
+    ouline: "none",
+    border: "none",
+    color: "white",
+  };
+
+  //==================================================================================
+  //==================================================================================
   return (
-    <div>
+    <div style={mainPage}>
       <h2>Open AMM</h2>
       <h3>Trade 24/7</h3>
       {/* <img
         src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
         alt=""
       /> */}
-      <form action="" onSubmit={() => onUpdateUserWallet(user)}>
-        <label htmlFor="user-tokens">
-          What do you have to trade?
+      <form style={formStyles} onSubmit={() => onUpdateUserWallet(user)}>
+        <label htmlFor="user-tokens" style={swapText}>
+          Swap From:
+        </label>
+        <div style={inputDiv}>
           <input
+            style={numberInput}
             type="number"
             value={userAmount}
             onChange={(e) => handleUserAmountChange(e)}
           />
           <select
+            style={dropDownInput}
             name=""
             id="user-tokens"
             value={userSelect}
@@ -81,10 +143,14 @@ function Exchange({
           >
             {userDropdown}
           </select>
+        </div>
+
+        <label htmlFor="lps" style={swapText}>
+          Swap To:
         </label>
-        <label htmlFor="lps">
-          What would you like?
+        <div style={inputDiv}>
           <input
+            style={numberInput}
             type="number"
             name=""
             id=""
@@ -92,6 +158,7 @@ function Exchange({
             onChange={(e) => handleLpsAmountChange(e)}
           />
           <select
+            style={dropDownInput}
             name=""
             id="lps"
             value={lpsSelect}
@@ -101,9 +168,15 @@ function Exchange({
             <option value="eth">Ethereum: ${ethPrice.toFixed(2)}</option>
             <option value="egld">Egold: ${egldPrice.toFixed(2)}</option>
           </select>
-        </label>
-        <button type="submit">Confirm Trade</button>
+        </div>
+
+        <button type="submit" style={confirmBtn}>
+          Confirm Trade
+        </button>
       </form>
+      <p>Exchange Rate</p>
+      <p>Slippage</p>
+      <p>Minimum received</p>
     </div>
   );
 }
